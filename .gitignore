@@ -1,0 +1,143 @@
+# ==============================================================================
+# 3D Video Studio - Git Ignore Configuration
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Dependencies & Package Managers
+# ------------------------------------------------------------------------------
+/node_modules/
+/.pnp/
+.pnp.js
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pdm-build/
+
+# ------------------------------------------------------------------------------
+# Next.js Build Outputs & Caches
+# ------------------------------------------------------------------------------
+/.next/
+/out/
+/build/
+/dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Local Secrets
+# (Never commit real credentials, tokens, or encryption keys)
+# ------------------------------------------------------------------------------
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+*.crt
+
+# Allow committing sample environment template
+!.env.example
+
+# ------------------------------------------------------------------------------
+# Trigger.dev Background Job Engine
+# ------------------------------------------------------------------------------
+/.trigger/
+.trigger-build/
+
+# ------------------------------------------------------------------------------
+# Modal & Python Artifacts (Cloud GPU Sculpting Service)
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+.modal.toml
+*.egg-info/
+.eggs/
+
+# ------------------------------------------------------------------------------
+# Generated 3D Models, Renders & Heavy Media Assets
+# Keep directory structure via .gitkeep but ignore heavy binary assets
+# ------------------------------------------------------------------------------
+public/models/characters/*.glb
+public/models/characters/*.obj
+public/models/characters/*.fbx
+public/models/characters/*.stl
+public/models/characters/*.svg
+public/images/characters/
+public/videos/
+*.mp4
+*.webm
+*.mov
+*.avi
+*.wav
+*.mp3
+
+# Preserve essential placeholders in public
+!public/models/characters/.gitkeep
+!public/images/.gitkeep
+
+# ------------------------------------------------------------------------------
+# Logs, Diagnostics & Temp Files
+# ------------------------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ------------------------------------------------------------------------------
+# Operating System & File System Artifacts
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ------------------------------------------------------------------------------
+# IDE & Code Editor Files
+# ------------------------------------------------------------------------------
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
